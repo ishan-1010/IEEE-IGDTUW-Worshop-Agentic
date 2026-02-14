@@ -1,6 +1,6 @@
-# 🚀 Level Up to Agentic AI: Hands-On Workshop
+# Level Up to Agentic AI: Hands-On Workshop
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ishan-1010/IEEE-IGDTUW-Worshop-Agentic/blob/main/workshop.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IUZrlt4jZhDNfLJ6mfmCqJaDCj7LaRfF?usp=sharing)
 ![Python 3](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)
 ![Gemini API](https://img.shields.io/badge/Powered%20by-Gemini-4E86F8?logo=google&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -17,20 +17,20 @@ Your agent will:
 
 ---
 
-## ⚡ Quick Start (Do This Now)
+## Quick Start (Do This Now)
 
 You need exactly **3 things** to participate. Get them ready before we start!
 
-### 1. 📂 Open the Notebook
-Click the badge above or [**click here**](https://colab.research.google.com/github/ishan-1010/IEEE-IGDTUW-Worshop-Agentic/blob/main/workshop.ipynb) to open the student notebook in Google Colab.
+### 1. Open the Notebook
+Click the badge above or [**click here**](https://colab.research.google.com/drive/1IUZrlt4jZhDNfLJ6mfmCqJaDCj7LaRfF?usp=sharing) to open the student notebook in Google Colab.
 
-### 2. 🔑 Get Your Free API Key
+### 2. Get Your Free API Key
 1.  Go to [**Google AI Studio**](https://aistudio.google.com).
 2.  Click **"Get API Key"**.
 3.  Click **"Create API key in new project"**.
 4.  Copy the key (it starts with `AIza...`).
 
-### 3. ⚙️ Setup in Colab
+### 3. Setup in Colab
 1.  Inside Colab, click the **Key Icon** 🔑 (secrets) in the left sidebar.
 2.  Add a new secret:
     *   **Name:** `GEMINI_API_KEY`
@@ -39,7 +39,7 @@ Click the badge above or [**click here**](https://colab.research.google.com/gith
 
 ---
 
-## 📚 What You Will Learn
+## What You Will Learn
 
 | Level | concept | What You Build |
 |---|---|---|
@@ -50,15 +50,15 @@ Click the badge above or [**click here**](https://colab.research.google.com/gith
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 *   **Google Colab** (Free Python Environment)
-*   **Gemini 1.5 Flash** (Fast, Free LLM)
+*   **Gemini 2.0 Flash** (Fast, Free LLM)
 *   **Gradio** (Instant Web UIs)
 
 ---
 
-## ❓ Troubleshooting
+## Troubleshooting
 
 **"I got an API Key Error!"**
 *   Did you add the secret in the left sidebar?
@@ -70,12 +70,11 @@ Click the badge above or [**click here**](https://colab.research.google.com/gith
 
 ---
 
-## 💬 Connect with the Speaker
+## Connect with the Speaker
 
-**Ishan**
-*   🤖 **Role:** AI Engineer & Agentic AI Specialist
-*   🎤 **Speaker:** GDG Cloud New Delhi
-*   🔗 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/ishan-katoch) (Tag me in your post!)
+**Ishan Katoch**
+*   **Role:** AI Engineer & Agentic AI Specialist
+*   **LinkedIn:** [Connect with me](https://www.linkedin.com/in/ishan-katoch) (Tag me in your post!)
 
 ---
 
