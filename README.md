@@ -10,9 +10,9 @@ A hands-on workshop where students build a **"Roast My Resume" AI Agent** — an
 
 ## Open the Workshop Notebook
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/ieee-workshop/blob/main/workshop.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ishan-1010/IEEE-IGDTUW-Worshop-Agentic/blob/main/workshop.ipynb)
 
-> Replace `YOUR_USERNAME` with your GitHub username after pushing this repo.
+> Click the badge above to open the student notebook.
 
 ---
 
