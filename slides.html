@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level Up to Agentic AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.min.css">
+  <style>
+    :root {
+      --bg: #050508;
+      --cyan: #00d4ff;
+      --green: #00ff88;
+      --red: #ff4466;
+      --yellow: #ffcc00;
+      --dim: #555;
+      --subtle: #333;
+    }
+
+    .reveal {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: #ccc;
+    }
+
+    /* Reserve space for scrollbar so content stays visually centered */
+    html {
+      scrollbar-gutter: stable;
+    }
+
+    .reveal .slides {
+      height: 100% !important;
+    }
+
+    .reveal .slides section {
+      padding: 14px 32px !important;
+      text-align: center;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 0 !important;
+      overflow: hidden;
+    }
+
+    .reveal .slides section>* {
+      max-width: 100%;
+      flex-shrink: 0;
+    }
+
+    /* Left-aligned content inside centered blocks (steps, cols) */
+    .reveal .steps,
+    .reveal .two-col .col,
+    .reveal .resource-row {
+      text-align: left;
+    }
+
+    .reveal .two-col {
+      text-align: center;
+    }
+
+    /* --- Typography --- */
+    .reveal h1,
+    .reveal h2,
+    .reveal h3 {
+      font-weight: 800;
+      text-transform: none;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin: 0 0 0.3em 0;
+    }
+
+    .reveal h1 {
+      font-size: 2.2em;
+      line-height: 1.1;
+    }
+
+    .reveal h2 {
+      font-size: 1.55em;
+      line-height: 1.15;
+    }
+
+    .reveal h3 {
+      font-size: 1.05em;
+      font-weight: 600;
+    }
+
+    .reveal p {
+      font-size: 0.72em;
+      line-height: 1.5;
+      margin: 0.35em 0;
+      font-weight: 300;
+    }
+
+    /* --- Utility --- */
+    .cyan {
+      color: var(--cyan);
+    }
+
+    .green {
+      color: var(--green);
+    }
+
+    .red {
+      color: var(--red);
+    }
+
+    .yellow {
+      color: var(--yellow);
+    }
+
+    .dim {
+      color: var(--dim);
+    }
+
+    .white {
+      color: #fff;
+    }
+
+    .light {
+      font-weight: 300;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .subtitle {
+      font-size: 0.85em !important;
+      font-weight: 300;
+      color: #666;
+      margin-top: 0.3em;
+    }
+
+    .label {
+      font-size: 0.55em;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--cyan);
+      margin-bottom: 0.3em;
+    }
+
+    .big-text {
+      font-size: 2.4em !important;
+      font-weight: 800 !important;
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .mid-text {
+      font-size: 1.4em;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .footer-text {
+      font-size: 0.45em;
+      color: #444;
+      margin-top: 1em;
+    }
+
+    /* --- Glow effects --- */
+    .glow-cyan {
+      text-shadow: 0 0 40px rgba(0, 212, 255, 0.35);
+    }
+
+    .glow-green {
+      text-shadow: 0 0 40px rgba(0, 255, 136, 0.35);
+    }
+
+    .glow-red {
+      text-shadow: 0 0 40px rgba(255, 68, 102, 0.35);
+    }
+
+    /* --- Cards (3-column) --- */
+    .card-row {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      margin-top: 0.7em;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #0d0d12, #111118);
+      border: 1px solid #1a1a24;
+      border-radius: 12px;
+      padding: 22px 18px 20px;
+      flex: 1;
+      max-width: 26%;
+      text-align: center;
+      transition: border-color 0.3s;
+    }
+
+    .card-icon {
+      font-size: 1.8em;
+      margin-bottom: 0.25em;
+    }
+
+    .card h3 {
+      font-size: 0.9em;
+      margin: 0.2em 0;
+    }
+
+    .card p {
+      font-size: 0.58em;
+      color: #777;
+      margin: 0.15em 0 0;
+      line-height: 1.4;
+    }
+
+    /* --- Steps --- */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 0.6em;
+      max-width: 85%;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #0b0b10;
+      border: 1px solid #1a1a24;
+      border-radius: 10px;
+      padding: 10px 20px;
+      text-align: left;
+    }
+
+    .step-number {
+      font-size: 1em;
+      font-weight: 800;
+      color: var(--cyan);
+      min-width: 26px;
+    }
+
+    .step-content {
+      font-size: 0.7em;
+      color: #bbb;
+      font-weight: 400;
+    }
+
+    .step-content strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* --- Level badge --- */
+    .level-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--cyan), #0066ff);
+      color: #000;
+      font-weight: 700;
+      font-size: 0.55em;
+      padding: 6px 24px;
+      border-radius: 20px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.3em;
+    }
+
+    /* --- Pipeline diagram --- */
+    .pipeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin-top: 0.5em;
+      width: 90%;
+      max-width: 100%;
+    }
+
+    .pipe-node {
+      background: #0d0d14;
+      border: 1px solid #1e1e2e;
+      border-radius: 10px;
+      padding: 10px 24px;
+      font-size: 0.68em;
+      font-weight: 500;
+      color: #ccc;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    .pipe-node.active-green {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .pipe-node.active-yellow {
+      border-color: var(--yellow);
+      color: var(--yellow);
+    }
+
+    .pipe-node.active-red {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .pipe-node.active-cyan {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    .pipe-arrow {
+      font-size: 0.75em;
+      color: #333;
+      line-height: 1;
+      padding: 2px 0;
+    }
+
+    /* --- Two-column --- */
+    .two-col {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-top: 0.6em;
+      width: 90%;
+      max-width: 100%;
+    }
+
+    .col {
+      flex: 1;
+      max-width: 45%;
+      text-align: left;
+    }
+
+    .col h3 {
+      font-size: 0.85em;
+      margin-bottom: 0.35em;
+    }
+
+    .col p {
+      font-size: 0.68em;
+      line-height: 1.7;
+    }
+
+    .col-divider {
+      width: 1px;
+      background: #222;
+    }
+
+    /* --- Resource links --- */
+    .resource-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 0.6em;
+      max-width: 85%;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .resource-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 0;
+      border-bottom: 1px solid #151518;
+    }
+
+    .resource-item .r-label {
+      font-size: 0.55em;
+      font-weight: 700;
+      color: var(--cyan);
+      min-width: 52px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .resource-item a {
+      font-size: 0.68em;
+      color: #999;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    .resource-item a:hover {
+      color: var(--cyan);
+    }
+
+    /* Professional icons (Unicode, not emoji) */
+    .icon-x,
+    .icon-check {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 700;
+    }
+
+    .pipe-node .icon-check {
+      color: var(--green);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1 — TITLE -->
+      <section data-background-gradient="radial-gradient(ellipse at center, #0a0a14 0%, #050508 70%)">
+        <p class="label">IEEE IGDTUW Workshop</p>
+        <h1>Level Up to<br><span class="cyan glow-cyan">Agentic AI</span></h1>
+        <p class="subtitle">Hands-On Workshop for Future Builders</p>
+        <p class="footer-text">Ishan Katoch &nbsp;&middot;&nbsp; AI Engineer</p>
+        <aside class="notes">Welcome. Quick poll — who's useds ChatGPT? Good. Who's built something with an AI API? That
+          gap is what we close today. In the next hour, you'll build an autonomous AI agent from scratch.</aside>
+      </section>
+
+      <!-- 2 — THE SHIFT -->
+      <section>
+        <p class="big-text">Chatbots <span class="red">answer</span>.<br>Agents <span
+            class="green glow-green">act</span>.</p>
+        <aside class="notes">That's the entire shift in one line. A chatbot sits there waiting for your next question.
+          An agent takes a goal, makes a plan, picks up tools, and gets the job done. You're going to build the second
+          one.</aside>
+      </section>
+
+      <!-- 3 — THREE PILLARS -->
+      <section>
+        <p class="label">What makes AI Agentic?</p>
+        <h2>Three Superpowers</h2>
+        <div class="card-row">
+          <div class="card fragment">
+            <div class="card-icon">{ }</div>
+            <h3 class="cyan">Structured Thinking</h3>
+            <p>Returns data, not paragraphs.<br>Code can read it.</p>
+          </div>
+          <div class="card fragment">
+            <div class="card-icon" style="font-family: inherit;">&#9881;</div>
+            <h3 class="yellow">Tool Use</h3>
+            <p>Calls functions on its own.<br>Gets real-world context.</p>
+          </div>
+          <div class="card fragment">
+            <div class="card-icon" style="font-family: inherit;">&#8635;</div>
+            <h3 class="red">Self-Correction</h3>
+            <p>Reviews its own work.<br>Fixes its own mistakes.</p>
+          </div>
+        </div>
+        <aside class="notes">Every production agent has these three things. Structured output so downstream code can use
+          it. Tool calling so it can reach outside its training data. And self-correction — the reflection loop — so it
+          iterates toward better answers. You'll build all three.</aside>
+      </section>
+
+      <!-- 4 — TODAY'S BUILD -->
+      <section data-background-gradient="radial-gradient(ellipse at bottom, #140808 0%, #050508 60%)">
+        <p class="label">Today you'll build</p>
+        <h1>Roast My<br><span class="red glow-red">Resume</span></h1>
+        <p class="subtitle" style="margin-top: 0.4em;">Roasts it. Rewrites it. Argues with itself. Makes it perfect.</p>
+        <aside class="notes">An agent that takes your resume bullet points, brutally roasts the weak ones, rewrites them
+          for a specific role using recruiter data, and then critiques its own rewrite to make it even better. From
+          scratch. In Python. For free.</aside>
+      </section>
+
+      <!-- 5 — SETUP -->
+      <section>
+        <p class="label">Let's go</p>
+        <h2>Setup</h2>
+        <div class="steps">
+          <div class="step fragment">
+            <div class="step-number">1</div>
+            <div class="step-content"><strong>Open the notebook</strong> — click the Colab link</div>
+          </div>
+          <div class="step fragment">
+            <div class="step-number">2</div>
+            <div class="step-content"><strong>Get API key</strong> — <span class="cyan">aistudio.google.com</span> → Get
+              API Key → Create</div>
+          </div>
+          <div class="step fragment">
+            <div class="step-number">3</div>
+            <div class="step-content"><strong>Paste in Colab</strong> — Secrets sidebar → <span
+                class="mono cyan">GEMINI_API_KEY</span></div>
+          </div>
+          <div class="step fragment">
+            <div class="step-number">4</div>
+            <div class="step-content"><strong>Run first cell</strong> — see <span class="green">"Setup complete!"</span>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">This should take about 5 minutes. TAs, float around. If anyone's stuck after 2 minutes on
+          the API key, hand them one of our backup keys.</aside>
+      </section>
+
+      <!-- 6 — LEVEL 1 -->
+      <section>
+        <div class="level-badge">Level 1</div>
+        <h2>Teach Your AI to <span class="cyan glow-cyan">Think</span></h2>
+        <div class="two-col" style="margin-top: 1.2em;">
+          <div class="col" style="text-align: center;">
+            <h3 class="red"><span class="icon-x">&#10005;</span> &nbsp;Chatbot</h3>
+            <p class="dim" style="font-size: 0.85em; margin-top: 0.6em;">"Here's a paragraph<br>about your resume..."
+            </p>
+          </div>
+          <div class="col-divider"></div>
+          <div class="col" style="text-align: center;">
+            <h3 class="green"><span class="icon-check">&#10003;</span> &nbsp;Agent</h3>
+            <p class="mono cyan" style="font-size: 0.7em; line-height: 2; margin-top: 0.6em;">
+              { "score": 3,<br>
+              &nbsp;&nbsp;"roast": "...",<br>
+              &nbsp;&nbsp;"rewrite": "..." }
+            </p>
+          </div>
+        </div>
+        <aside class="notes">If your LLM returns a paragraph, your code can't do anything with it. But if it returns
+          JSON — score, roast, rewrite — now you can pipe that into the next step automatically. That's the foundation.
+          Open your notebook, Level 1 cell. Write the prompt.</aside>
+      </section>
+
+      <!-- 7 — LEVEL 2 -->
+      <section>
+        <div class="level-badge">Level 2</div>
+        <h2>Give Your AI <span class="yellow" style="text-shadow: 0 0 30px rgba(255,204,0,0.25);">Superpowers</span>
+        </h2>
+        <div class="pipeline" style="margin-top: 1em;">
+          <div class="pipe-node fragment">Resume bullet → LLM → <span class="dim">generic roast</span></div>
+          <div class="pipe-arrow fragment">↓ <span style="font-size: 0.7em; color: var(--yellow);">add a tool</span>
+          </div>
+          <div class="pipe-node active-yellow fragment">Resume bullet → <strong
+              style="color:#ffcc00">Tool(role)</strong> → LLM → <span class="green">targeted roast</span></div>
+        </div>
+        <p class="dim" style="font-size: 0.7em; margin-top: 1.2em;"><em>"For a Software Engineer, this bullet is missing
+            DSA, system design, and quantified impact."</em></p>
+        <aside class="notes">Without a tool, the agent is guessing. With a tool — a simple Python function that returns
+          what recruiters actually want — the agent gives role-specific, actionable advice. This is exactly how
+          production agents work: they call APIs, search databases, read files. Your tool is a function. The concept is
+          identical.</aside>
+      </section>
+
+      <!-- 8 — LEVEL 3 -->
+      <section>
+        <div class="level-badge">Level 3</div>
+        <h2>Make Your AI <span class="red glow-red">Argue With Itself</span></h2>
+        <div class="pipeline" style="margin-top: 1em;">
+          <div class="pipe-node active-green fragment">Agent writes a rewrite</div>
+          <div class="pipe-arrow">↓</div>
+          <div class="pipe-node active-red fragment">Second call: <strong style="color:var(--red)">"Find 3
+              problems"</strong></div>
+          <div class="pipe-arrow">↓</div>
+          <div class="pipe-node active-cyan fragment">Agent fixes its own mistakes → <strong
+              style="color:var(--cyan)">Final output</strong></div>
+        </div>
+        <p class="dim" style="font-size: 0.7em; margin-top: 1.2em;">The Reflection Pattern — used in Devin, AutoGPT, and
+          every production agent.</p>
+        <aside class="notes">This is the pattern that turns a script into an agent. It doesn't just respond. It
+          iterates. Write, critique, fix. That loop is the core of every serious AI system. Open Level 3 in your
+          notebook.</aside>
+      </section>
+
+      <!-- 9 — ARCHITECTURE -->
+      <section>
+        <p class="label">What you built</p>
+        <h2>The Full Pipeline</h2>
+        <div class="pipeline" style="margin-top: 0.6em;">
+          <div class="pipe-node" style="border-color: #444; color: #888;">Resume Bullet</div>
+          <div class="pipe-arrow">↓</div>
+          <div class="pipe-node active-green"><strong>Level 1</strong> &nbsp;Structured Roast → JSON</div>
+          <div class="pipe-arrow">↓</div>
+          <div class="pipe-node active-yellow"><strong>Level 2</strong> &nbsp;Tool Call → Context-Aware Rewrite</div>
+          <div class="pipe-arrow">↓</div>
+          <div class="pipe-node active-red"><strong>Level 3</strong> &nbsp;Self-Critique → Fix → Final Version</div>
+          <div class="pipe-arrow">↓</div>
+          <div class="pipe-node active-cyan" style="border-width: 2px;"><span class="icon-check">&#10003;</span>
+            &nbsp;Production-Grade Bullet + ATS Score</div>
+        </div>
+        <aside class="notes">This is the architecture you just built. Input flows through structured output,
+          tool-augmented rewriting, and self-correction. Three agentic patterns. One pipeline. Zero cost. This is
+          genuinely how production agents are designed.</aside>
+      </section>
+
+      <!-- 10 — SECRET LEVEL -->
+      <section data-background-gradient="radial-gradient(ellipse at center, #080814 0%, #050508 60%)">
+        <p class="label" style="color: var(--green);">Secret Level Unlocked</p>
+        <h1>Deploy It.<br><span class="cyan glow-cyan">Right Now.</span></h1>
+        <p style="margin-top: 0.6em; font-size: 0.95em; font-weight: 300; color: #555;">5 lines of code → live web app →
+          public URL</p>
+        <aside class="notes">Scroll to the bonus cells. Five lines of Gradio code. share=True gives you a public URL.
+          Send it to your friends. Send it to your parents. You just deployed an AI application. Watch the URL appear.
+        </aside>
+      </section>
+
+      <!-- 11 — WHAT'S NEXT -->
+      <section>
+        <p class="label">Where this goes</p>
+        <h2>The Bigger Picture</h2>
+        <div class="two-col" style="margin-top: 0.8em;">
+          <div class="col">
+            <h3 class="dim">Today</h3>
+            <p>Single agent<br>One tool<br>Simple reflection<br>Colab notebook</p>
+          </div>
+          <div class="col-divider"></div>
+          <div class="col">
+            <h3 class="cyan">Next</h3>
+            <p><span class="cyan">LangGraph</span> — multi-agent orchestration<br>
+              <span class="cyan">MCP</span> — universal tool protocol<br>
+              <span class="cyan">Vertex AI</span> — production deployment<br>
+              <span class="cyan">Cloud Run</span> — 24/7 agents
+            </p>
+          </div>
+        </div>
+        <aside class="notes">Everything on the right is built on the three patterns you just learned. LangGraph
+          orchestrates multiple agents. MCP standardizes how agents connect to tools. But the core logic — structured
+          output, tool use, reflection — you already know it.</aside>
+      </section>
+
+      <!-- 12 — RESOURCES -->
+      <section>
+        <p class="label">Keep going</p>
+        <h2>Resources</h2>
+        <div class="resource-row">
+          <div class="resource-item">
+            <span class="r-label">API</span>
+            <a href="https://aistudio.google.com">aistudio.google.com — free Gemini key, no expiry</a>
+          </div>
+          <div class="resource-item">
+            <span class="r-label">Docs</span>
+            <a href="https://ai.google.dev/docs">ai.google.dev/docs — Gemini API reference</a>
+          </div>
+          <div class="resource-item">
+            <span class="r-label">Agents</span>
+            <a href="https://langchain-ai.github.io/langgraph/">LangGraph — multi-agent orchestration</a>
+          </div>
+          <div class="resource-item">
+            <span class="r-label">MCP</span>
+            <a href="https://modelcontextprotocol.io">modelcontextprotocol.io — tool interoperability</a>
+          </div>
+        </div>
+        <aside class="notes">All free. All open. The Gemini API key you got today doesn't expire. Keep building.
+          Workshop notebook stays on GitHub forever.</aside>
+      </section>
+
+      <!-- 13 — CLOSING -->
+      <section data-background-gradient="radial-gradient(ellipse at center, #0a0a14 0%, #050508 70%)">
+        <p class="big-text">You just built what<br>companies pay <span class="green glow-green">₹20L+</span> for.</p>
+        <p style="font-size: 1.1em; color: #555; margin-top: 0.7em; font-weight: 300;">Keep building.</p>
+        <p class="footer-text">Ishan Katoch &nbsp;&middot;&nbsp; AI Engineer</p>
+        <aside class="notes">Hands up — who thought they could build this an hour ago? Look at your screen. You did it.
+          The API key is free forever. The notebook is yours. Don't stop here.</aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: false,
+      transition: 'fade',
+      transitionSpeed: 'slow',
+      backgroundTransition: 'fade',
+      center: true,
+      width: 1100,
+      height: 700,
+      margin: 0.1,
+      minScale: 0.5,
+      maxScale: 1.5,
+      controls: false
+    });
+  </script>
+</body>
+
+</html>
