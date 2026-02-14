@@ -53,7 +53,7 @@ Click the badge above or [**click here**](https://colab.research.google.com/driv
 ## Tech Stack
 
 *   **Google Colab** (Free Python Environment)
-*   **Gemini 2.0 Flash** (Fast, Free LLM)
+*   **Gemini 1.5 Flash** (Fast, Free LLM)
 *   **Gradio** (Instant Web UIs)
 
 ---
