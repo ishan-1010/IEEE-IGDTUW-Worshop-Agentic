@@ -1,90 +1,82 @@
-# Level Up to Agentic AI: Hands-On Workshop for Future Builders
-
-> Build your first self-correcting AI agent — from scratch, for free, in 1 hour.
-
-A hands-on workshop where students build a **"Roast My Resume" AI Agent** — an autonomous system that analyzes resume bullet points, roasts the weak ones, rewrites them stronger, and then *critiques its own rewrite* to improve it further. All built from scratch in Python, running on Google Colab with free APIs.
-
-**No installs. No paid tools. No credit cards.**
-
----
-
-## Open the Workshop Notebook
+# 🚀 Level Up to Agentic AI: Hands-On Workshop
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ishan-1010/IEEE-IGDTUW-Worshop-Agentic/blob/main/workshop.ipynb)
+![Python 3](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)
+![Gemini API](https://img.shields.io/badge/Powered%20by-Gemini-4E86F8?logo=google&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-> Click the badge above to open the student notebook.
+> **Build your first self-correcting AI agent — from scratch, for free, in 1 hour.**
 
----
+Welcome to the **IEEE IGDTUW Workshop**! Today, you won't just *talk* about AI; you will **build** an autonomous agent that acts as a savage (but helpful) career coach.
 
-## Pre-Workshop Checklist (Share With Students)
-
-Students need **3 things** before the session starts:
-
-| # | What | How |
-|---|------|-----|
-| 1 | A **Google account** | Any Gmail works |
-| 2 | A **laptop with a browser** | Chrome recommended |
-| 3 | A **free Gemini API key** | Go to [aistudio.google.com](https://aistudio.google.com) → "Get API Key" → "Create API key in new project" → Copy it |
-
-That's it. Everything runs in the browser.
+Your agent will:
+1.  **Analyze** resume bullet points.
+2.  **Roast** the weak ones.
+3.  **Rewrite** them to be stronger.
+4.  **Critique its own work** to make it perfect.
 
 ---
 
-## What Students Will Learn
+## ⚡ Quick Start (Do This Now)
 
-| Level | Concept | What They Build |
-|-------|---------|-----------------|
-| **Level 1** | Structured Output | Prompt that returns JSON (score, roast, rewrite) instead of prose |
-| **Level 2** | Tool Use | Python function that gives the agent recruiter context per role |
-| **Level 3** | Self-Correction | Reflection loop — agent critiques and rewrites its own output |
-| **Bonus** | Deployment | Gradio web app with a shareable public URL |
-| **Bonus** | ATS Scoring | Gamified ATS compatibility score (before vs after) |
-| **Bonus** | LinkedIn Post | Auto-generated LinkedIn post about what they built |
+You need exactly **3 things** to participate. Get them ready before we start!
 
----
+### 1. 📂 Open the Notebook
+Click the badge above or [**click here**](https://colab.research.google.com/github/ishan-1010/IEEE-IGDTUW-Worshop-Agentic/blob/main/workshop.ipynb) to open the student notebook in Google Colab.
 
-## Tech Stack
+### 2. 🔑 Get Your Free API Key
+1.  Go to [**Google AI Studio**](https://aistudio.google.com).
+2.  Click **"Get API Key"**.
+3.  Click **"Create API key in new project"**.
+4.  Copy the key (it starts with `AIza...`).
 
-| Component | Tool | Cost |
-|-----------|------|------|
-| IDE | [Google Colab](https://colab.research.google.com) | Free |
-| LLM | [Gemini 1.5 Flash](https://aistudio.google.com) (Google AI Studio) | Free tier — no credit card |
-| Web App | [Gradio](https://gradio.app) | Free (runs in Colab) |
-| Code Distribution | This GitHub repo + "Open in Colab" badge | Free |
+### 3. ⚙️ Setup in Colab
+1.  Inside Colab, click the **Key Icon** 🔑 (secrets) in the left sidebar.
+2.  Add a new secret:
+    *   **Name:** `GEMINI_API_KEY`
+    *   **Value:** *(Paste your key)*
+3.  Toggle **"Notebook access"** to **ON**.
 
 ---
 
-## Repo Structure
+## 📚 What You Will Learn
 
-```
-ieee-workshop/
-├── README.md              ← You are here
-├── slides.html            ← Reveal.js slide deck (open in browser)
-├── demo.ipynb             ← Live demo notebook (presenter only)
-├── workshop.ipynb         ← Student notebook (has TODO cells)
-└── solutions.ipynb        ← Completed solutions (all TODOs filled in)
-```
+| Level | concept | What You Build |
+|---|---|---|
+| **Level 1** | **Structured Output** | Stop the LLM from yapping. Make it return JSON. |
+| **Level 2** | **Tool Use** | Give the LLM "eyes" to read recruiter guidelines. |
+| **Level 3** | **Self-Correction** | The "Reflection Pattern" — forcing the AI to fix its own mistakes. |
+| **Bonus** | **Deployment** | Turn your code into a **shareable web app** with Gradio. |
 
 ---
 
-## Running the Slides
+## 🛠️ Tech Stack
 
-Open `slides.html` in any browser. Arrow keys to navigate. Press `F` for fullscreen. Press `S` for speaker notes.
-
----
-
-## Workshop Duration
-
-**1 hour** — designed for 1st–3rd year engineering students with basic Python familiarity.
+*   **Google Colab** (Free Python Environment)
+*   **Gemini 1.5 Flash** (Fast, Free LLM)
+*   **Gradio** (Instant Web UIs)
 
 ---
 
-## Presenter
+## ❓ Troubleshooting
 
-**Ishan** — AI Engineer | GDG Cloud New Delhi Speaker | Agentic AI & RAG Specialist
+**"I got an API Key Error!"**
+*   Did you add the secret in the left sidebar?
+*   Did you name it exactly `GEMINI_API_KEY`?
+*   Did you toggle "Notebook access" to ON?
+
+**"The code says 'Resource Exhausted'!"**
+*   The free tier allows 15 requests per minute. Wait 60 seconds and try again.
 
 ---
 
-## License
+## 💬 Connect with the Speaker
 
-MIT — use, remix, and teach freely.
+**Ishan**
+*   🤖 **Role:** AI Engineer & Agentic AI Specialist
+*   🎤 **Speaker:** GDG Cloud New Delhi
+*   🔗 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/ishan-katoch) (Tag me in your post!)
+
+---
+
+> **Note:** This repository includes a completed `solutions.ipynb` in case you get stuck. But try to build it yourself first!
