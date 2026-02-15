@@ -1,11 +1,13 @@
 # Level Up to Agentic AI: Hands-On Workshop
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/114yNcWV7JyBre56PIipkElWgJ_aZFJHJ?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1T4TVh-2A1-i4IBTh0v2B-rLAefw7S52a?usp=sharing)
 ![Python 3](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)
 ![Gemini API](https://img.shields.io/badge/Powered%20by-Gemini-4E86F8?logo=google&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 > **Build your first self-correcting AI agent — from scratch, for free, in 1 hour.**
+
+**Presenting?** See **[PRESENTER.md](PRESENTER.md)** for a 1-hour runbook: when to show slides vs Colab, how to keep students engaged, and what to do when API keys or quota break.
 
 Welcome to the **IEEE IGDTUW Workshop**! Today, you won't just *talk* about AI; you will **build** an autonomous agent that acts as a savage (but helpful) career coach.
 
@@ -22,7 +24,7 @@ Your agent will:
 You need exactly **3 things** to participate. Get them ready before we start!
 
 ### 1. Open the Notebook
-Click the badge above or [**click here**](https://colab.research.google.com/drive/114yNcWV7JyBre56PIipkElWgJ_aZFJHJ?usp=sharing) to open the student notebook in Google Colab.
+Click the badge above or [**click here**](https://colab.research.google.com/drive/1T4TVh-2A1-i4IBTh0v2B-rLAefw7S52a?usp=sharing) to open the student notebook in Google Colab.
 
 ### 2. Get Your Free API Key
 1.  Go to [**Google AI Studio**](https://aistudio.google.com).
