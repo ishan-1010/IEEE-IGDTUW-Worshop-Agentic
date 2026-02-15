@@ -7,8 +7,6 @@
 
 > **Build your first self-correcting AI agent — from scratch, for free, in 1 hour.**
 
-**Presenting?** See **[PRESENTER.md](PRESENTER.md)** for a 1-hour runbook: when to show slides vs Colab, how to keep students engaged, and what to do when API keys or quota break.
-
 Welcome to the **IEEE IGDTUW Workshop**! Today, you won't just *talk* about AI; you will **build** an autonomous agent that acts as a savage (but helpful) career coach.
 
 Your agent will:
