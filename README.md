@@ -53,7 +53,7 @@ Click the badge above or [**click here**](https://colab.research.google.com/driv
 ## Tech Stack
 
 *   **Google Colab** (Free Python Environment)
-*   **Gemini 2.5 Flash-Lite** (Fast, Free LLM)
+*   **Gemini 2.0 Flash** (Fast, free-tier friendly; 1.5K requests/day. Avoid **2.5 Flash Lite** — only 10 RPM, 20 RPD.)
 *   **Gradio** (Instant Web UIs)
 
 ---
@@ -65,8 +65,10 @@ Click the badge above or [**click here**](https://colab.research.google.com/driv
 *   Did you name it exactly `GEMINI_API_KEY`?
 *   Did you toggle "Notebook access" to ON?
 
-**"The code says 'Resource Exhausted'!"**
-*   The free tier allows 15 requests per minute. Wait 60 seconds and try again.
+**"Resource Exhausted" or "429" / rate limit / expires very fast**
+*   **Gemini 2.5 Flash Lite** has strict free limits: **10 requests/minute** and **20 requests/day**. One full notebook run can exceed that.
+*   **Fix:** In the Setup cell, use `genai.GenerativeModel('gemini-2.0-flash')` instead of `gemini-2.5-flash-lite`. Gemini 2.0 Flash has **1,500 requests/day** on the free tier.
+*   If you hit the **daily** limit, wait until the next day (resets midnight Pacific) or switch to another project/API key.
 
 ---
 
