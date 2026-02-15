@@ -3,3 +3,5 @@ demo.ipynb
 .ipynb_checkpoints
 __pycache__
 .env
+.venv
+.gitignore

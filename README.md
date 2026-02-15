@@ -31,7 +31,7 @@ Click the badge above or [**click here**](https://colab.research.google.com/driv
 4.  Copy the key (it starts with `AIza...`).
 
 ### 3. Setup in Colab
-1.  Inside Colab, click the **Key Icon** 🔑 (secrets) in the left sidebar.
+1.  Inside Colab, click the **Key Icon** (secrets) in the left sidebar.
 2.  Add a new secret:
     *   **Name:** `GEMINI_API_KEY`
     *   **Value:** *(Paste your key)*
