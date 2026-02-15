@@ -65,6 +65,9 @@ Click the badge above or [**click here**](https://colab.research.google.com/driv
 *   Did you name it exactly `GEMINI_API_KEY`?
 *   Did you toggle "Notebook access" to ON?
 
+**"roast_my_resume is not defined" (Gradio cell)**
+*   Run the **Full Pipeline → Helpers** cell first (the one with `call_llm`, `get_role_requirements`, `roast_my_resume`). It must run before the Gradio "Deploy" cell.
+
 **"Resource Exhausted" / "429" / "limit: 0"**
 *   Notebooks use **gemini-2.5-flash** by default (most reliable free tier). If you changed the model, set it back to `genai.GenerativeModel('gemini-2.5-flash')` in the Setup cell.
 *   If you see **limit: 0**, your project has no quota — create the key from [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey), enable **Generative Language API** in Cloud Console, or try another Google account.
