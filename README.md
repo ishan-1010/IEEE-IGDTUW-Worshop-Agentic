@@ -53,7 +53,7 @@ Click the badge above or [**click here**](https://colab.research.google.com/driv
 ## Tech Stack
 
 *   **Google Colab** (Free Python Environment)
-*   **Gemini 2.0 Flash** (Fast, free-tier friendly; 1.5K requests/day. Avoid **2.5 Flash Lite** — only 10 RPM, 20 RPD.)
+*   **Gemini 2.5 Flash** (Default model; most reliable free tier. Use `gemini-2.5-flash` in Setup.)
 *   **Gradio** (Instant Web UIs)
 
 ---
@@ -65,10 +65,10 @@ Click the badge above or [**click here**](https://colab.research.google.com/driv
 *   Did you name it exactly `GEMINI_API_KEY`?
 *   Did you toggle "Notebook access" to ON?
 
-**"Resource Exhausted" or "429" / rate limit / expires very fast**
-*   **Gemini 2.5 Flash Lite** has strict free limits: **10 requests/minute** and **20 requests/day**. One full notebook run can exceed that.
-*   **Fix:** In the Setup cell, use `genai.GenerativeModel('gemini-2.0-flash')` instead of `gemini-2.5-flash-lite`. Gemini 2.0 Flash has **1,500 requests/day** on the free tier.
-*   If you hit the **daily** limit, wait until the next day (resets midnight Pacific) or switch to another project/API key.
+**"Resource Exhausted" / "429" / "limit: 0"**
+*   Notebooks use **gemini-2.5-flash** by default (most reliable free tier). If you changed the model, set it back to `genai.GenerativeModel('gemini-2.5-flash')` in the Setup cell.
+*   If you see **limit: 0**, your project has no quota — create the key from [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey), enable **Generative Language API** in Cloud Console, or try another Google account.
+*   Daily limit resets at midnight Pacific.
 
 ---
 
