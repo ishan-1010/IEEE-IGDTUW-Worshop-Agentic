@@ -6,24 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Level Up to Agentic AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.min.css">
   <style>
     :root {
-      --bg: #050508;
-      --cyan: #00d4ff;
-      --green: #00ff88;
-      --red: #ff4466;
-      --yellow: #ffcc00;
-      --dim: #555;
-      --subtle: #333;
+      --bg: #040507;
+      --bg-elevated: #0a0b0f;
+      --cyan: #22d3ee;
+      --cyan-dim: rgba(34, 211, 238, 0.15);
+      --green: #34d399;
+      --green-dim: rgba(52, 211, 153, 0.12);
+      --red: #f87171;
+      --red-dim: rgba(248, 113, 113, 0.12);
+      --yellow: #fbbf24;
+      --yellow-dim: rgba(251, 191, 36, 0.12);
+      --dim: #64748b;
+      --subtle: #1e293b;
+      --border: rgba(255, 255, 255, 0.06);
+      --radius: 16px;
+      --radius-sm: 12px;
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+      --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.4);
     }
 
     .reveal {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
-      color: #ccc;
+      color: #cbd5e1;
+    }
+
+    .reveal .slides section {
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(15, 23, 42, 0.5) 0%, transparent 55%);
     }
 
     /* Reserve space for scrollbar so content stays visually centered */
@@ -36,7 +51,7 @@
     }
 
     .reveal .slides section {
-      padding: 14px 32px !important;
+      padding: 20px 40px !important;
       text-align: center;
       display: flex !important;
       flex-direction: column;
@@ -65,37 +80,40 @@
       text-align: center;
     }
 
-    /* --- Typography --- */
+    /* --- Typography (Outfit for headings) --- */
     .reveal h1,
     .reveal h2,
     .reveal h3 {
-      font-weight: 800;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
       text-transform: none;
-      letter-spacing: -0.03em;
-      color: #fff;
-      margin: 0 0 0.3em 0;
+      letter-spacing: -0.025em;
+      color: #f8fafc;
+      margin: 0 0 0.35em 0;
     }
 
     .reveal h1 {
-      font-size: 2.2em;
-      line-height: 1.1;
+      font-size: 2.35em;
+      line-height: 1.08;
+      font-weight: 800;
     }
 
     .reveal h2 {
-      font-size: 1.55em;
-      line-height: 1.15;
+      font-size: 1.6em;
+      line-height: 1.2;
     }
 
     .reveal h3 {
-      font-size: 1.05em;
+      font-size: 1.08em;
       font-weight: 600;
     }
 
     .reveal p {
-      font-size: 0.72em;
-      line-height: 1.5;
-      margin: 0.35em 0;
-      font-weight: 300;
+      font-size: 0.74em;
+      line-height: 1.55;
+      margin: 0.4em 0;
+      font-weight: 400;
+      color: #94a3b8;
     }
 
     /* --- Utility --- */
@@ -136,97 +154,134 @@
     }
 
     .subtitle {
-      font-size: 0.85em !important;
-      font-weight: 300;
-      color: #666;
-      margin-top: 0.3em;
+      font-size: 0.88em !important;
+      font-weight: 400;
+      color: #64748b;
+      margin-top: 0.35em;
+      letter-spacing: 0.01em;
     }
 
     .label {
-      font-size: 0.55em;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.52em;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.2em;
       color: var(--cyan);
-      margin-bottom: 0.3em;
+      margin-bottom: 0.4em;
+      display: inline-block;
+    }
+
+    .label::after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan), transparent);
+      margin: 6px auto 0;
+      border-radius: 1px;
+      opacity: 0.7;
     }
 
     .big-text {
-      font-size: 2.4em !important;
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5em !important;
       font-weight: 800 !important;
-      color: #fff;
-      line-height: 1.15;
+      color: #f8fafc;
+      line-height: 1.12;
       letter-spacing: -0.03em;
     }
 
     .mid-text {
       font-size: 1.4em;
       font-weight: 600;
-      color: #fff;
+      color: #f8fafc;
     }
 
     .footer-text {
-      font-size: 0.45em;
-      color: #444;
-      margin-top: 1em;
+      font-size: 0.46em;
+      color: #475569;
+      margin-top: 1.2em;
+      letter-spacing: 0.02em;
     }
 
-    /* --- Glow effects --- */
+    /* --- Glow (premium, layered) --- */
     .glow-cyan {
-      text-shadow: 0 0 40px rgba(0, 212, 255, 0.35);
+      text-shadow: 0 0 48px rgba(34, 211, 238, 0.4), 0 0 24px rgba(34, 211, 238, 0.2);
     }
-
     .glow-green {
-      text-shadow: 0 0 40px rgba(0, 255, 136, 0.35);
+      text-shadow: 0 0 48px rgba(52, 211, 153, 0.4), 0 0 24px rgba(52, 211, 153, 0.2);
     }
-
     .glow-red {
-      text-shadow: 0 0 40px rgba(255, 68, 102, 0.35);
+      text-shadow: 0 0 48px rgba(248, 113, 113, 0.4), 0 0 24px rgba(248, 113, 113, 0.2);
     }
 
-    /* --- Cards (3-column) --- */
+    /* --- Cards (glass, accent bar, premium shadow) --- */
     .card-row {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       justify-content: center;
-      margin-top: 0.7em;
+      margin-top: 0.9em;
     }
 
     .card {
-      background: linear-gradient(145deg, #0d0d12, #111118);
-      border: 1px solid #1a1a24;
-      border-radius: 12px;
-      padding: 22px 18px 20px;
+      background: linear-gradient(160deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.6) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px 22px;
       flex: 1;
       max-width: 26%;
       text-align: center;
-      transition: border-color 0.3s;
+      box-shadow: var(--shadow), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+      position: relative;
+      overflow: hidden;
     }
 
+    .card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      border-radius: 3px 0 0 3px;
+      background: linear-gradient(180deg, var(--cyan), transparent);
+      opacity: 0.9;
+    }
+
+    .card:nth-child(2)::before { background: linear-gradient(180deg, var(--yellow), transparent); }
+    .card:nth-child(3)::before { background: linear-gradient(180deg, var(--red), transparent); }
+
     .card-icon {
-      font-size: 1.8em;
-      margin-bottom: 0.25em;
+      font-size: 1.9em;
+      margin-bottom: 0.3em;
+      font-weight: 600;
+      opacity: 0.95;
     }
 
     .card h3 {
-      font-size: 0.9em;
-      margin: 0.2em 0;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.92em;
+      margin: 0.25em 0;
+      font-weight: 600;
     }
 
     .card p {
-      font-size: 0.58em;
-      color: #777;
-      margin: 0.15em 0 0;
-      line-height: 1.4;
+      font-size: 0.6em;
+      color: #94a3b8;
+      margin: 0.2em 0 0;
+      line-height: 1.45;
     }
 
-    /* --- Steps --- */
+    /* --- Steps (glass, left accent) --- */
     .steps {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-top: 0.6em;
-      max-width: 85%;
+      gap: 10px;
+      margin-top: 0.7em;
+      max-width: 88%;
       width: 100%;
       margin-left: auto;
       margin-right: auto;
@@ -235,136 +290,160 @@
     .step {
       display: flex;
       align-items: center;
-      gap: 14px;
-      background: #0b0b10;
-      border: 1px solid #1a1a24;
-      border-radius: 10px;
-      padding: 10px 20px;
+      gap: 18px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.5) 100%);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 22px;
       text-align: left;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--cyan), rgba(34, 211, 238, 0.4));
+      border-radius: 4px 0 0 4px;
     }
 
     .step-number {
-      font-size: 1em;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05em;
       font-weight: 800;
       color: var(--cyan);
-      min-width: 26px;
+      min-width: 28px;
     }
 
     .step-content {
-      font-size: 0.7em;
-      color: #bbb;
+      font-size: 0.72em;
+      color: #cbd5e1;
       font-weight: 400;
     }
 
     .step-content strong {
-      color: #fff;
+      color: #f8fafc;
       font-weight: 600;
     }
 
     /* --- Level badge --- */
     .level-badge {
       display: inline-block;
-      background: linear-gradient(135deg, var(--cyan), #0066ff);
-      color: #000;
+      background: linear-gradient(135deg, var(--cyan), #0ea5e9);
+      color: #0f172a;
       font-weight: 700;
-      font-size: 0.55em;
-      padding: 6px 24px;
-      border-radius: 20px;
-      letter-spacing: 0.1em;
+      font-size: 0.52em;
+      padding: 8px 28px;
+      border-radius: 999px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 0.3em;
+      margin-bottom: 0.35em;
+      box-shadow: 0 2px 12px rgba(34, 211, 238, 0.3);
     }
 
-    /* --- Pipeline diagram --- */
+    /* --- Pipeline (refined nodes, soft glow) --- */
     .pipeline {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0;
-      margin-top: 0.5em;
-      width: 90%;
+      margin-top: 0.6em;
+      width: 92%;
       max-width: 100%;
     }
 
     .pipe-node {
-      background: #0d0d14;
-      border: 1px solid #1e1e2e;
-      border-radius: 10px;
-      padding: 10px 24px;
-      font-size: 0.68em;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.7) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 28px;
+      font-size: 0.7em;
       font-weight: 500;
-      color: #ccc;
+      color: #94a3b8;
       width: 100%;
       max-width: 100%;
       text-align: center;
-      position: relative;
+      box-shadow: var(--shadow);
     }
 
     .pipe-node.active-green {
-      border-color: var(--green);
+      border-color: rgba(52, 211, 153, 0.4);
       color: var(--green);
+      box-shadow: var(--shadow), 0 0 24px var(--green-dim);
     }
 
     .pipe-node.active-yellow {
-      border-color: var(--yellow);
+      border-color: rgba(251, 191, 36, 0.4);
       color: var(--yellow);
+      box-shadow: var(--shadow), 0 0 24px var(--yellow-dim);
     }
 
     .pipe-node.active-red {
-      border-color: var(--red);
+      border-color: rgba(248, 113, 113, 0.4);
       color: var(--red);
+      box-shadow: var(--shadow), 0 0 24px var(--red-dim);
     }
 
     .pipe-node.active-cyan {
-      border-color: var(--cyan);
+      border-color: rgba(34, 211, 238, 0.5);
       color: var(--cyan);
+      box-shadow: var(--shadow), 0 0 28px var(--cyan-dim);
     }
 
     .pipe-arrow {
-      font-size: 0.75em;
-      color: #333;
+      font-size: 0.7em;
+      color: #334155;
       line-height: 1;
-      padding: 2px 0;
+      padding: 4px 0;
     }
 
-    /* --- Two-column --- */
+    /* --- Two-column (gradient divider) --- */
     .two-col {
       display: flex;
       gap: 40px;
       justify-content: center;
-      margin-top: 0.6em;
-      width: 90%;
+      margin-top: 0.7em;
+      width: 92%;
       max-width: 100%;
     }
 
     .col {
       flex: 1;
-      max-width: 45%;
+      max-width: 46%;
       text-align: left;
     }
 
     .col h3 {
-      font-size: 0.85em;
-      margin-bottom: 0.35em;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.88em;
+      margin-bottom: 0.4em;
     }
 
     .col p {
-      font-size: 0.68em;
+      font-size: 0.7em;
       line-height: 1.7;
+      color: #94a3b8;
     }
 
     .col-divider {
       width: 1px;
-      background: #222;
+      background: linear-gradient(180deg, transparent, rgba(255,255,255,0.08), transparent);
+      border-radius: 1px;
     }
 
-    /* --- Resource links --- */
+    /* --- Resource links (card-style, hover glow) --- */
     .resource-row {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-top: 0.6em;
-      max-width: 85%;
+      gap: 6px;
+      margin-top: 0.7em;
+      max-width: 88%;
       width: 100%;
       margin-left: auto;
       margin-right: auto;
@@ -373,35 +452,44 @@
     .resource-item {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 8px 0;
-      border-bottom: 1px solid #151518;
+      gap: 18px;
+      padding: 14px 20px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0.3) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .resource-item:hover {
+      border-color: rgba(34, 211, 238, 0.25);
+      box-shadow: 0 0 20px var(--cyan-dim);
     }
 
     .resource-item .r-label {
-      font-size: 0.55em;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.52em;
       font-weight: 700;
       color: var(--cyan);
-      min-width: 52px;
+      min-width: 56px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
     }
 
     .resource-item a {
-      font-size: 0.68em;
-      color: #999;
+      font-size: 0.7em;
+      color: #94a3b8;
       text-decoration: none;
       font-weight: 400;
+      transition: color 0.2s;
     }
 
     .resource-item a:hover {
       color: var(--cyan);
     }
 
-    /* Professional icons (Unicode, not emoji) */
     .icon-x,
     .icon-check {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Outfit', 'Inter', system-ui, sans-serif;
       font-weight: 700;
     }
 
@@ -416,13 +504,14 @@
     <div class="slides">
 
       <!-- 1 — TITLE -->
-      <section data-background-gradient="radial-gradient(ellipse at center, #0a0a14 0%, #050508 70%)">
+      <section data-background-gradient="radial-gradient(ellipse 100% 70% at 50% 0%, rgba(15, 23, 42, 0.95) 0%, #040507 60%)">
         <p class="label">IEEE IGDTUW Workshop</p>
         <h1>Level Up to<br><span class="cyan glow-cyan">Agentic AI</span></h1>
         <p class="subtitle">Hands-On Workshop for Future Builders</p>
 
-        <img src="qr-code.png" alt="Scan for Workshop Code"
-          style="width: 180px; border-radius: 12px; margin: 30px auto; display: block; box-shadow: 0 0 25px rgba(0,212,255,0.15);">
+        <div style="margin: 28px auto; padding: 14px; background: linear-gradient(160deg, rgba(15,23,42,0.85), rgba(15,23,42,0.5)); backdrop-filter: blur(10px); border: 1px solid rgba(34,211,238,0.18); border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.4), 0 0 48px rgba(34,211,238,0.06); display: inline-block;">
+          <img src="qr-code.png" alt="Scan for Workshop Code" style="width: 164px; height: 164px; display: block; border-radius: 10px;">
+        </div>
 
         <p class="footer-text">Ishan Katoch &nbsp;&middot;&nbsp; AI Engineer</p>
 
@@ -433,6 +522,17 @@
         <p class="big-text">Chatbots <span class="red">answer</span>.<br>Agents <span
             class="green glow-green">act</span>.</p>
 
+      </section>
+
+      <!-- 2b — WHERE YOU'VE SEEN AGENTS (teaching) -->
+      <section>
+        <p class="label">Teaching</p>
+        <h2>Where you've already seen agents</h2>
+        <div class="steps" style="margin-top: 1em; text-align: left; max-width: 90%;">
+          <p class="fragment" style="font-size: 0.85em;">Customer support bots that <strong>look up your order</strong> (tool) and <strong>rephrase</strong> until you're satisfied (self-correction).</p>
+          <p class="fragment" style="font-size: 0.85em; margin-top: 0.6em;">Code agents (Devin, Cursor) that <strong>read your codebase</strong> (tools) and <strong>plan → run → review → fix</strong> (structured steps + reflection).</p>
+          <p class="fragment dim" style="font-size: 0.8em; margin-top: 0.8em;">Same three ideas: structured output, tools, self-correction.</p>
+        </div>
       </section>
 
       <!-- 3 — THREE PILLARS -->
@@ -459,12 +559,39 @@
 
       </section>
 
+      <!-- 3b — WHY THESE THREE (teaching, one slide) -->
+      <section>
+        <p class="label">Teaching</p>
+        <h2>Why these three?</h2>
+        <div class="steps" style="margin-top: 1em; text-align: left; max-width: 92%;">
+          <p class="fragment" style="font-size: 0.88em;"><span class="cyan">Structured output</span> — APIs and code need data, not prose. <em>"Return ONLY valid JSON"</em> → your code gets a dict; no regex.</p>
+          <p class="fragment" style="font-size: 0.88em; margin-top: 0.5em;"><span class="yellow">Tools</span> — The model doesn't have your data. Tools = eyes (read docs, APIs) and hands (run code). Model decides when to call them.</p>
+          <p class="fragment" style="font-size: 0.88em; margin-top: 0.5em;"><span class="red">Self-correction</span> — First draft is rarely production-ready. Reflection: generate → critique (find problems) → fix. Same in Devin, AutoGPT.</p>
+        </div>
+      </section>
+
       <!-- 4 — TODAY'S BUILD -->
       <section data-background-gradient="radial-gradient(ellipse at bottom, #140808 0%, #050508 60%)">
         <p class="label">Today you'll build</p>
         <h1>Roast My<br><span class="red glow-red">Resume</span></h1>
         <p class="subtitle" style="margin-top: 0.4em;">Roasts it. Rewrites it. Argues with itself. Makes it perfect.</p>
 
+      </section>
+
+      <!-- 4b — WHY RESUMES GET REJECTED (teaching, optional) -->
+      <section>
+        <p class="label">Teaching</p>
+        <h2>Why resumes get rejected (and how we'll fix it)</h2>
+        <div class="two-col" style="margin-top: 1em;">
+          <div class="col">
+            <p class="fragment" style="font-size: 0.85em;"><strong>ATS</strong> — keywords and structure.</p>
+            <p class="fragment" style="font-size: 0.85em; margin-top: 0.5em;"><strong>Recruiters</strong> — impact and role fit.</p>
+          </div>
+          <div class="col-divider"></div>
+          <div class="col">
+            <p class="fragment dim" style="font-size: 0.85em;">Our agent will use <span class="yellow">role-specific context</span> (tool) and <span class="red">self-critique</span> (reflection) to align bullets with both.</p>
+          </div>
+        </div>
       </section>
 
       <!-- 5 — SETUP -->
@@ -495,65 +622,13 @@
         <p style="margin-top: 1.2em; font-size: 0.75em;"><a href="https://colab.research.google.com/drive/1T4TVh-2A1-i4IBTh0v2B-rLAefw7S52a?usp=sharing" target="_blank" rel="noopener" style="color: var(--cyan);">colab.research.google.com — open workshop notebook</a></p>
       </section>
 
-      <!-- 6 — LEVEL 1 -->
-      <section>
-        <div class="level-badge">Level 1</div>
-        <h2>Teach Your AI to <span class="cyan glow-cyan">Think</span></h2>
-        <div class="two-col" style="margin-top: 1.2em;">
-          <div class="col" style="text-align: center;">
-            <h3 class="red"><span class="icon-x">&#10005;</span> &nbsp;Chatbot</h3>
-            <p class="dim" style="font-size: 0.85em; margin-top: 0.6em;">"Here's a paragraph<br>about your resume..."
-            </p>
-          </div>
-          <div class="col-divider"></div>
-          <div class="col" style="text-align: center;">
-            <h3 class="green"><span class="icon-check">&#10003;</span> &nbsp;Agent</h3>
-            <p class="mono cyan" style="font-size: 0.7em; line-height: 2; margin-top: 0.6em;">
-              { "score": 3,<br>
-              &nbsp;&nbsp;"roast": "...",<br>
-              &nbsp;&nbsp;"rewrite": "..." }
-            </p>
-          </div>
-        </div>
-
+      <!-- HANDOFF: Colab only from here until "Full Pipeline" -->
+      <section data-background-gradient="radial-gradient(ellipse at center, #0a1210 0%, #050508 70%)">
+        <p class="big-text">Open <span class="cyan glow-cyan">Colab</span></p>
+        <p class="dim" style="font-size: 0.9em; margin-top: 0.8em;">Levels 1 → 2 → 3 → demo → Gradio.<br>We'll come back to slides when we're done.</p>
       </section>
 
-      <!-- 7 — LEVEL 2 -->
-      <section>
-        <div class="level-badge">Level 2</div>
-        <h2>Give Your AI <span class="yellow" style="text-shadow: 0 0 30px rgba(255,204,0,0.25);">Superpowers</span>
-        </h2>
-        <div class="pipeline" style="margin-top: 1em;">
-          <div class="pipe-node fragment">Resume bullet → LLM → <span class="dim">generic roast</span></div>
-          <div class="pipe-arrow fragment">↓ <span style="font-size: 0.7em; color: var(--yellow);">add a tool</span>
-          </div>
-          <div class="pipe-node active-yellow fragment">Resume bullet → <strong
-              style="color:#ffcc00">Tool(role)</strong> → LLM → <span class="green">targeted roast</span></div>
-        </div>
-        <p class="dim" style="font-size: 0.7em; margin-top: 1.2em;"><em>"For a Software Engineer, this bullet is missing
-            DSA, system design, and quantified impact."</em></p>
-
-      </section>
-
-      <!-- 8 — LEVEL 3 -->
-      <section>
-        <div class="level-badge">Level 3</div>
-        <h2>Make Your AI <span class="red glow-red">Argue With Itself</span></h2>
-        <div class="pipeline" style="margin-top: 1em;">
-          <div class="pipe-node active-green fragment">Agent writes a rewrite</div>
-          <div class="pipe-arrow">↓</div>
-          <div class="pipe-node active-red fragment">Second call: <strong style="color:var(--red)">"Find 3
-              problems"</strong></div>
-          <div class="pipe-arrow">↓</div>
-          <div class="pipe-node active-cyan fragment">Agent fixes its own mistakes → <strong
-              style="color:var(--cyan)">Final output</strong></div>
-        </div>
-        <p class="dim" style="font-size: 0.7em; margin-top: 1.2em;">The Reflection Pattern — used in Devin, AutoGPT, and
-          every production agent.</p>
-
-      </section>
-
-      <!-- 9 — ARCHITECTURE -->
+      <!-- 9 — ARCHITECTURE (back to slides after Colab) -->
       <section>
         <p class="label">What you built</p>
         <h2>The Full Pipeline</h2>
@@ -631,9 +706,14 @@
       <!-- 13 — CLOSING -->
       <section data-background-gradient="radial-gradient(ellipse at center, #0a0a14 0%, #050508 70%)">
         <p class="big-text">You just built what<br>companies pay <span class="green glow-green">₹20L+</span> for.</p>
-        <p style="font-size: 1.1em; color: #555; margin-top: 0.7em; font-weight: 300;">Keep building.</p>
+        <p style="font-size: 1.1em; color: #64748b; margin-top: 0.7em; font-weight: 400;">Keep building.</p>
         <p class="footer-text">Ishan Katoch &nbsp;&middot;&nbsp; AI Engineer</p>
-
+        <div style="margin-top: 1em; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+          <div style="padding: 10px; background: linear-gradient(160deg, rgba(15,23,42,0.85), rgba(15,23,42,0.5)); border: 1px solid rgba(34,211,238,0.18); border-radius: 14px; box-shadow: 0 6px 32px rgba(0,0,0,0.35), 0 0 40px rgba(34,211,238,0.06);">
+            <img src="qr-code-linkedin.png" alt="Scan to connect on LinkedIn" style="width: 120px; height: 120px; display: block; border-radius: 8px;">
+          </div>
+          <a href="https://www.linkedin.com/in/ishan-katoch/" target="_blank" rel="noopener noreferrer" style="color: var(--cyan); text-decoration: none; font-size: 0.85em; font-weight: 500;">Connect on LinkedIn</a>
+        </div>
       </section>
 
     </div>
