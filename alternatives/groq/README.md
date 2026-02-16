@@ -1,6 +1,6 @@
 # Level Up to Agentic AI: Hands-On Workshop
 
-<a href="https://colab.research.google.com/drive/1PnV2Hao7X7gq1ek8UnK6jn2qUwb-xQGa?usp=sharing" target="_blank" rel="noopener noreferrer">[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PnV2Hao7X7gq1ek8UnK6jn2qUwb-xQGa?usp=sharing)</a>
+<a href="https://colab.research.google.com/drive/1PnV2Hao7X7gq1ek8UnK6jn2qUwb-xQGa?usp=sharing" target="_blank" rel="noopener noreferrer">[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IxVrwAb2sLqvby8RqXV0MgHLMIKiTx7X?usp=sharing)</a>
 ![Python 3](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)
 ![Groq API](https://img.shields.io/badge/Powered%20by-Groq-F55036?logo=groq&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -24,7 +24,7 @@ You need exactly **3 things** to participate. Get them ready before we start!
 
 ### 1. Open the Notebook
 
-Click the badge above or <a href="https://colab.research.google.com/drive/1PnV2Hao7X7gq1ek8UnK6jn2qUwb-xQGa?usp=sharing" target="_blank" rel="noopener noreferrer">**click here**</a> to open the student notebook in Google Colab.
+Click the badge above or <a href="https://colab.research.google.com/drive/1IxVrwAb2sLqvby8RqXV0MgHLMIKiTx7X?usp=sharing" target="_blank" rel="noopener noreferrer">**click here**</a> to open the student notebook in Google Colab.
 
 ### 2. Get Your Free API Key
 
