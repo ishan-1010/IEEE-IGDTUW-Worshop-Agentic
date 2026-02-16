@@ -105,5 +105,3 @@ For a fast pre-session checklist, see `WORKSHOP_SETUP.md`.
 ### After the workshop: challenges
 
 Practice with **[challenges/](challenges/)** — 6 follow-up challenges (add ATS score, new tools, batch mode, two reflection rounds, LinkedIn one-liner, Gradio upgrade). Use your notebook or solutions as reference.
-
-> **Presenters:** See `PRESENTER.md` for a minute-by-minute workshop runbook.
