@@ -41,6 +41,22 @@ Click the badge above or [**click here**](https://colab.research.google.com/driv
    * **Value:** *(Paste your key)*
 3. Toggle **"Notebook access"** to **ON**.
 
+### Optional: Local `.env` Setup (for VS Code/Jupyter)
+
+If you are running locally instead of Colab Secrets:
+
+1. Copy `.env.example` to `.env`
+2. Put your real key in `.env`
+3. Keep or change `GROQ_MODEL` as needed
+
+Example:
+
+```bash
+cp .env.example .env
+```
+
+For a fast pre-session checklist, see `WORKSHOP_SETUP.md`.
+
 ---
 
 ## What You Will Learn
