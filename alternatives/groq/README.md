@@ -1,6 +1,6 @@
 # Level Up to Agentic AI: Hands-On Workshop
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PnV2Hao7X7gq1ek8UnK6jn2qUwb-xQGa?usp=sharing)
+<a href="https://colab.research.google.com/drive/1PnV2Hao7X7gq1ek8UnK6jn2qUwb-xQGa?usp=sharing" target="_blank" rel="noopener noreferrer">[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PnV2Hao7X7gq1ek8UnK6jn2qUwb-xQGa?usp=sharing)</a>
 ![Python 3](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)
 ![Groq API](https://img.shields.io/badge/Powered%20by-Groq-F55036?logo=groq&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -24,11 +24,11 @@ You need exactly **3 things** to participate. Get them ready before we start!
 
 ### 1. Open the Notebook
 
-Click the badge above or [**click here**](https://colab.research.google.com/drive/1PnV2Hao7X7gq1ek8UnK6jn2qUwb-xQGa?usp=sharing) to open the student notebook in Google Colab.
+Click the badge above or <a href="https://colab.research.google.com/drive/1PnV2Hao7X7gq1ek8UnK6jn2qUwb-xQGa?usp=sharing" target="_blank" rel="noopener noreferrer">**click here**</a> to open the student notebook in Google Colab.
 
 ### 2. Get Your Free API Key
 
-1. Go to [**Groq Console**](https://console.groq.com/keys).
+1. Go to <a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer">**Groq Console**</a>.
 2. Click **"Create API key"**.
 3. Click **"Create key"**.
 4. Copy the key (it starts with `gsk_...`).
@@ -93,7 +93,7 @@ For a fast pre-session checklist, see `WORKSHOP_SETUP.md`.
 **"Rate limit" / "429" / quota errors**
 
 * Notebooks use **Groq with `llama-3.3-70b-versatile`** by default. If you changed the model, set it back to `llama-3.3-70b-versatile` in the Setup cell.
-* Check usage and limits in [console.groq.com](https://console.groq.com). Verify `GROQ_API_KEY` in Colab Secrets/.env, and try a different model from the `GROQ_MODELS` list in the Setup cell.
+* Check usage and limits in <a href="https://console.groq.com" target="_blank" rel="noopener noreferrer">console.groq.com</a>. Verify `GROQ_API_KEY` in Colab Secrets/.env, and try a different model from the `GROQ_MODELS` list in the Setup cell.
 * If you hit rate limits, wait and retry; the notebook already uses exponential backoff.
 
 ---
@@ -103,7 +103,7 @@ For a fast pre-session checklist, see `WORKSHOP_SETUP.md`.
 **Ishan Katoch**
 
 * **Role:** AI Engineer & Agentic AI Specialist
-* **LinkedIn:** [Connect with me](https://www.linkedin.com/in/ishan-katoch) (Tag me in your post!)
+* **LinkedIn:** <a href="https://www.linkedin.com/in/ishan-katoch" target="_blank" rel="noopener noreferrer">Connect with me</a> (Tag me in your post!)
 
 ---
 

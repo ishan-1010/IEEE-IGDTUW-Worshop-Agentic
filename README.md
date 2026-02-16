@@ -1,6 +1,6 @@
 # Level Up to Agentic AI: Hands-On Workshop
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1T4TVh-2A1-i4IBTh0v2B-rLAefw7S52a?usp=sharing)
+<a href="https://colab.research.google.com/drive/1T4TVh-2A1-i4IBTh0v2B-rLAefw7S52a?usp=sharing" target="_blank" rel="noopener noreferrer">[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1T4TVh-2A1-i4IBTh0v2B-rLAefw7S52a?usp=sharing)</a>
 ![Python 3](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)
 ![Gemini API](https://img.shields.io/badge/Powered%20by-Gemini-4E86F8?logo=google&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -22,10 +22,10 @@ Your agent will:
 You need exactly **3 things** to participate. Get them ready before we start!
 
 ### 1. Open the Notebook
-Click the badge above or [**click here**](https://colab.research.google.com/drive/1T4TVh-2A1-i4IBTh0v2B-rLAefw7S52a?usp=sharing) to open the student notebook in Google Colab.
+Click the badge above or <a href="https://colab.research.google.com/drive/1T4TVh-2A1-i4IBTh0v2B-rLAefw7S52a?usp=sharing" target="_blank" rel="noopener noreferrer">**click here**</a> to open the student notebook in Google Colab.
 
 ### 2. Get Your Free API Key
-1.  Go to [**Google AI Studio**](https://aistudio.google.com).
+1.  Go to <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer">**Google AI Studio**</a>.
 2.  Click **"Get API Key"**.
 3.  Click **"Create API key in new project"**.
 4.  Copy the key (it starts with `AIza...`).
@@ -85,7 +85,7 @@ For a fast pre-session checklist, see `WORKSHOP_SETUP.md`.
 
 **"Resource Exhausted" / "429" / "limit: 0"**
 *   Notebooks use **gemini-2.5-flash** by default (most reliable free tier). If you changed the model, set it back to `genai.GenerativeModel('gemini-2.5-flash')` in the Setup cell.
-*   If you see **limit: 0**, your project has no quota — create the key from [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey), enable **Generative Language API** in Cloud Console, or try another Google account.
+*   If you see **limit: 0**, your project has no quota — create the key from <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">aistudio.google.com/app/apikey</a>, enable **Generative Language API** in Cloud Console, or try another Google account.
 *   Daily limit resets at midnight Pacific.
 
 ---
@@ -94,7 +94,7 @@ For a fast pre-session checklist, see `WORKSHOP_SETUP.md`.
 
 **Ishan Katoch**
 *   **Role:** AI Engineer & Agentic AI Specialist
-*   **LinkedIn:** [Connect with me](https://www.linkedin.com/in/ishan-katoch) (Tag me in your post!)
+*   **LinkedIn:** <a href="https://www.linkedin.com/in/ishan-katoch" target="_blank" rel="noopener noreferrer">Connect with me</a> (Tag me in your post!)
 
 ---
 
