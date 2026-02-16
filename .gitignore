@@ -5,4 +5,7 @@ __pycache__
 .env
 .venv
 .gitignore
-PRESENTER.mdindex.html
+PRESENTER.md
+index.html
+qr-code-linkedin.png
+qr-code.png
