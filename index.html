@@ -496,6 +496,21 @@
     .pipe-node .icon-check {
       color: var(--green);
     }
+
+    /* Mermaid diagrams: use most of slide width so they're readable */
+    .reveal .mermaid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 92%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .reveal .mermaid svg {
+      width: 100%;
+      height: auto;
+      min-width: 0;
+    }
   </style>
 </head>
 
@@ -559,6 +574,34 @@
 
       </section>
 
+      <!-- 3a — VISUAL: Agentic pipeline -->
+      <section>
+        <p class="label">Visual</p>
+        <h2>How an agent works</h2>
+        <div class="mermaid" style="min-height: 280px;">
+flowchart LR
+  subgraph input[Input]
+    I[Resume bullet]
+  end
+  subgraph L1[Level 1]
+    A[JSON roast]
+  end
+  subgraph L2[Level 2]
+    T[Tool: role context]
+    B[Targeted rewrite]
+  end
+  subgraph L3[Level 3]
+    C[Critique]
+    F[Fix]
+  end
+  subgraph output[Output]
+    O[Final bullet]
+  end
+  I --> A --> T --> B --> C --> F --> O
+        </div>
+        <p class="dim" style="font-size: 0.65em; margin-top: 0.5em;">Structured output → Tool use → Self-correction</p>
+      </section>
+
       <!-- 3b — WHY THESE THREE (teaching, one slide) -->
       <section>
         <p class="label">Teaching</p>
@@ -568,6 +611,19 @@
           <p class="fragment" style="font-size: 0.88em; margin-top: 0.5em;"><span class="yellow">Tools</span> — The model doesn't have your data. Tools = eyes (read docs, APIs) and hands (run code). Model decides when to call them.</p>
           <p class="fragment" style="font-size: 0.88em; margin-top: 0.5em;"><span class="red">Self-correction</span> — First draft is rarely production-ready. Reflection: generate → critique (find problems) → fix. Same in Devin, AutoGPT.</p>
         </div>
+      </section>
+
+      <!-- 3c — VISUAL: Reflection pattern -->
+      <section>
+        <p class="label">Visual</p>
+        <h2>The reflection pattern</h2>
+        <div class="mermaid" style="min-height: 220px;">
+flowchart LR
+  G[Generate draft] --> K[Critique: find problems] --> F[Fix] --> D{Good enough?}
+  D -->|No| G
+  D -->|Yes| O[Final output]
+        </div>
+        <p class="dim" style="font-size: 0.65em; margin-top: 0.5em;">Same loop in Devin, AutoGPT, and our Level 3</p>
       </section>
 
       <!-- 4 — TODAY'S BUILD -->
@@ -684,6 +740,10 @@
         <h2>Resources</h2>
         <div class="resource-row">
           <div class="resource-item">
+            <span class="r-label">Repo</span>
+            <a href="challenges/README.md" target="_blank" rel="noopener">challenges/ — post-workshop challenges (6 follow-ups)</a>
+          </div>
+          <div class="resource-item">
             <span class="r-label">API</span>
             <a href="https://aistudio.google.com" target="_blank" rel="noopener">aistudio.google.com — free Gemini key, no expiry</a>
           </div>
@@ -720,6 +780,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
@@ -735,6 +796,32 @@
       maxScale: 1.5,
       controls: false
     });
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#0f172a',
+        primaryTextColor: '#cbd5e1',
+        primaryBorderColor: '#22d3ee',
+        lineColor: '#64748b',
+        secondaryColor: '#1e293b',
+        tertiaryColor: '#0f172a'
+      },
+      flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' }
+    });
+
+    function renderMermaid() {
+      const present = document.querySelector('.present');
+      if (!present) return;
+      present.querySelectorAll('.mermaid').forEach(function(el) {
+        if (el.querySelector('svg') || el.getAttribute('data-processed')) return;
+        mermaid.run({ nodes: [el], suppressErrors: true });
+      });
+    }
+
+    Reveal.on('ready', renderMermaid);
+    Reveal.on('slidechanged', renderMermaid);
   </script>
 </body>
 

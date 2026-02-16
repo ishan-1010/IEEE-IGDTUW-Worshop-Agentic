@@ -63,6 +63,8 @@ For a fast pre-session checklist, see `WORKSHOP_SETUP.md`.
 | **Level 3** | **Self-Correction** | The "Reflection Pattern" — forcing the AI to fix its own mistakes. |
 | **Bonus** | **Deployment** | Turn your code into a **shareable web app** with Gradio. |
 
+**Visual guide:** See [CONCEPTS.md](CONCEPTS.md) for Mermaid diagrams (agentic pipeline, reflection pattern, chatbot vs agent). They match the slides and help you visualize the flow.
+
 ---
 
 ## Tech Stack
@@ -99,5 +101,9 @@ For a fast pre-session checklist, see `WORKSHOP_SETUP.md`.
 ---
 
 > **Note:** This repository includes a completed `solutions.ipynb` in case you get stuck. But try to build it yourself first!
+
+### After the workshop: challenges
+
+Practice with **[challenges/](challenges/)** — 6 follow-up challenges (add ATS score, new tools, batch mode, two reflection rounds, LinkedIn one-liner, Gradio upgrade). Use your notebook or solutions as reference.
 
 > **Presenters:** See `PRESENTER.md` for a minute-by-minute workshop runbook.
